@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>shopping-cart</title>
+
+  <!-- Stylesheets -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <link href="./assets/javascript/index.js" rel="javascript">
 </head>
+
 <body>
+    <div class="container">
+      <div class="row">
+      <header style="font-size:60px">Buy Rite</header>
+    <div class="dropdown"> 
+        <select id="dropdownMenu" class="dropdown-content">
+           <option value="">Select</option> 
+           <option value="fruit">pineapple</option>
+           <option value="fruit">Cherry</option>
+           <option value="vegetables">Roamin Lettuice</option>
+           <option value="vegetables">Cucumber</option>
+           <option value="candy">Chocolate!</option>
+           <option value="">All</option>
+        </select>
+        <button id="filter">Filter</button>
+        <button id="clear">clear</button>
+        <p id="warning"> Product is already in the shopping cart!</p>
+    </div>
     
+    
+    <div id="buttons" class="product"><h2> Product List </h2>
+      <br></div>
+      
+      <div class="product">
+      
+      <h2> Shopping Cart </h2>
+      <div id="display"></div>
+    </div>
+    
+
+
+ 
+</div>
+ <script type="text/javascript" src="./assets/javascript/index.js"></script>
+  
 </body>
+
 </html>
