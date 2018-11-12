@@ -6,21 +6,11 @@
     height: 1095px;
   }
   
-  h1 {
-    font-weight: 800px;
-    font-size: 4em;
-  }
   h2 {
     font-weight: 800px;
     font-size: 2em; 
   }
-  
-  main:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
+
 .product {
     width: 380px;
     border: 1px solid #333;
@@ -72,9 +62,7 @@
     font-size: 1.5em;
     color: red;
   }
-  #productdropdown {
-      margin-left: 50px;
-  }
+ 
   #filter {
       width: 100px;
   }

@@ -1,13 +1,14 @@
 $(document).ready(function() {
 
-    var productList = [
-      {fruit: 'peaches'},
-      {vegetables: 'onions'},
-      {candy: 'snickers'},
-    ];
+      var productList = [
+        {fruit: 'peaches'},
+        {vegetables: 'onions'},
+        {candy: 'snickers'},
+      ];
 
-    var shoppingCart = [];
-  // DYNAMICALLY CREATE BUTTONS
+      var shoppingCart = [];
+      
+      // DYNAMICALLY CREATE BUTTONS
   
     const render = function() {
       for( let i = 0; i < productList.length; i++ ) {
@@ -18,59 +19,56 @@ $(document).ready(function() {
         $('#buttons').append(button);
       }
     }
-    
-    render();
 
-  
+    render();
+    
     // ATTACH ON-CLICK EVENTS TO BUTTONS
     
     const appendTask = function() {
-      const productName = $(this).attr("data");
+    const productName = $(this).attr("data");
       if (shoppingCart.includes(productName)){
         $('#warning').css('visibility', 'visible');
         $('.button').css({'background-color': 'rgb(216, 216, 216)', 'color': 'white'});
-        $('.button').prop('disable',1000) 
+        $('.button').prop('disable') 
         setTimeout(function(){
-          $('p:warning').css('visibility', 'hidden')
-          $('.button').css({'color':'rgb(120, 25, 25)', 'background-color': 'buttonface'});
-          $('.button').prop('disabled',false)
-        },1000);
+        $('p').css('visibility', 'hidden')
+        $('.button').css({'color':'rgb(120, 25, 25)', 'background-color': 'buttonface'})
+        },2000);
       }
       else {
         shoppingCart.push(productName);
-      const task = $('<div>').addClass('proj task-color');
-      task.text($(this).attr("data"));
-      $('#display').append(task);
+    const task = $('<div>').addClass('proj task-color');
+        task.text($(this).attr("data"));
+        $('#display').append(task);
       }  
     }
-    $('#buttons').on('click', '.button', appendTask)
+        $('#buttons').on('click', '.button', appendTask)
   
     // "CLEAR" BUTTON
    
     const clear = function() {
-      $('#display').empty();
-      shoppingCart = []; 
+        $('#display').empty();
+        shoppingCart = []; 
     }
-    $('#clear').on('click', clear);
+        $('#clear').on('click', clear);
   
     //"Filter" button
    
-    window.onclick = function () {
+       window.onclick = function () {
       if (event.target.matches('#dropdownMenu')) {
-        var dropdown = document.getElementsByClassName("dropdown-value");
-        var i;
-        for (i = 0; i < dropdown.length; i++) {
-          var openDropdown = dropdown[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
+    var dropdown = document.getElementsByClassName("dropdown-value: value");
+    var i;
+      for (i = 0; i < dropdown.length; i++) {
+    var openDropdown = dropdown[i];
+      if (openDropdown.classList.contains('show')) {
+          (openDropdown.classList.remove('show'))
     }
    }
   }
  }
   
     $("#filter").on("click", function () {
-      let selected = $("#myDropdown option:selected").val();
-      render(selected);
-    });
+ 
+    })
    
-  });
+});
